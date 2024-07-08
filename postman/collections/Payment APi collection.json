@@ -1,0 +1,1161 @@
+{
+	"info": {
+		"_postman_id": "19af203e-d902-46b9-a4d3-9b580d954886",
+		"name": "Payment APi collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "15227862-19af203e-d902-46b9-a4d3-9b580d954886"
+	},
+	"item": [
+		{
+			"name": "/",
+			"item": [
+				{
+					"name": "Ping",
+					"id": "21399e61-7385-4adc-aac5-558175d3520b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "1b8d30f5-d4ca-49d2-93a7-9a9f9976bd8c",
+							"name": "Successful response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://api.getpostman.com/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"getpostman",
+										"com"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "de60c04c-6914-4362-9c9d-f5f65c5c1959"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "9d07c870-7bb1-4612-8f39-e4e37c98c98c"
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "change-password",
+					"item": [
+						{
+							"name": "User Change Password",
+							"id": "be9240bc-31d4-41e9-8605-b747c045cfa9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/change-password",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"change-password"
+									]
+								},
+								"description": "This API is used to update the user password. The user must be authenticated and must remember the current password to update."
+							},
+							"response": [
+								{
+									"id": "19a125ea-a0ca-47e2-99f4-35157b0295eb",
+									"name": "Successful response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/user/change-password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user",
+												"change-password"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "22bc57fd-f32b-4ac6-8e2b-e13edcb74dc4"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "5e907e79-4cbe-46a9-a7a9-3e39969f6f2d"
+				},
+				{
+					"name": "logout",
+					"item": [
+						{
+							"name": "User Logout",
+							"id": "4546de95-4118-4757-9904-eed7c8a04ea7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "X-API-key",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user/logout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"logout"
+									]
+								},
+								"description": "This API revokes an active user session."
+							},
+							"response": [
+								{
+									"id": "f2c4be76-e3a5-49c7-a92c-0f17be5973c8",
+									"name": "Successful response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "X-API-key",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/user/logout",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user",
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "961d97ca-8280-4903-aa4b-956a35c42e11"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "b0c4f6ce-1f4f-4377-9183-c98087fdc4f5"
+				},
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "User Login",
+							"id": "0d9528b1-ecac-4dc1-8192-f5d2353db4d1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "f9ad74c2-3464-4495-b8b4-4e5ab83226fb",
+									"name": "Successful response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/user/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "0af87c9b-7971-4bb1-b95c-ffaf1bb27a7b"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "df69cdc5-b2ee-4aae-8bbd-de9a7087a073"
+				},
+				{
+					"name": "Update User Information",
+					"id": "3c662daf-0ca6-4df5-91e0-f733a703c9b4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-API-key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							]
+						},
+						"description": "Authenticated users can update their user information."
+					},
+					"response": [
+						{
+							"id": "6820e3cc-4746-4f4d-8f9e-9086f6901686",
+							"name": "Successful response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "X-API-key",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.getpostman.com/user",
+									"protocol": "https",
+									"host": [
+										"api",
+										"getpostman",
+										"com"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "a6081ae8-a63d-49c8-b3d2-df55b035b5cc"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"id": "84766e0d-289a-468d-92e1-dee853ba8723",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							]
+						},
+						"description": "Register a new user with The Good Bank. The username must be unique."
+					},
+					"response": [
+						{
+							"id": "d22551c0-13e3-458c-868b-4e3ffeb2671f",
+							"name": "Successful response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "67ab5b33-a6cc-4c5a-adfd-acfe88dd05d6"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "fe16c559-7e62-4be0-b137-df822c0d8f82"
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "{user_id}",
+					"item": [
+						{
+							"name": "summary",
+							"item": [
+								{
+									"name": "Account summary",
+									"id": "4e99f67b-e450-4df8-af4b-22d8cda837b7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/account/:user_id/summary",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"account",
+												":user_id",
+												"summary"
+											],
+											"variable": [
+												{
+													"key": "user_id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Fetch account summary for a single user."
+									},
+									"response": [
+										{
+											"id": "250f42f5-dd69-40d2-abcc-857c3373b2ec",
+											"name": "Successful response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "https://api.getpostman.com/account/:user_id/summary",
+													"protocol": "https",
+													"host": [
+														"api",
+														"getpostman",
+														"com"
+													],
+													"path": [
+														"account",
+														":user_id",
+														"summary"
+													],
+													"variable": [
+														{
+															"key": "user_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "ea643f35-89c1-4bbd-b56e-a206e66e3f90"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "39d90120-aeac-426c-969f-dd5a9275b053"
+						}
+					],
+					"id": "033b7879-775f-4254-8d40-1637d5440fb6"
+				},
+				{
+					"name": "transactions",
+					"item": [
+						{
+							"name": "Account transactions",
+							"id": "23f772fe-8c7c-4521-95d4-b6f122cea9d7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "X-API-key",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/account/transactions?limit=<integer>&filter=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"account",
+										"transactions"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "<integer>",
+											"description": "number of transactions to display"
+										},
+										{
+											"key": "filter",
+											"value": "<string>",
+											"description": "Search string to filter on transaction party"
+										}
+									]
+								},
+								"description": "Fetch transactions for a single account."
+							},
+							"response": [
+								{
+									"id": "95431d41-1137-4e97-804b-dee427415a93",
+									"name": "Successful response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "X-API-key",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/account/transactions?limit=<integer>&filter=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"account",
+												"transactions"
+											],
+											"query": [
+												{
+													"description": "number of transactions to display",
+													"key": "limit",
+													"value": "<integer>"
+												},
+												{
+													"description": "Search string to filter on transaction party",
+													"key": "filter",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "06e71e7f-0175-4536-b871-1833f1cc8b95"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "a9d69035-4b08-4f59-b0a9-539df63cb79c"
+				}
+			],
+			"id": "d8ca6e60-36f5-46ec-9031-2c078c8622ec"
+		},
+		{
+			"name": "people",
+			"item": [
+				{
+					"name": "customers",
+					"item": [
+						{
+							"name": "Our customers",
+							"id": "f0e04731-7e31-4870-a8cd-f7bb4214114e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "X-API-key",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/people/customers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"people",
+										"customers"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "dbaa324b-ee7e-4da4-bc06-edcdd0304aa4",
+									"name": "Successful response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "X-API-key",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/people/customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"people",
+												"customers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "cb3a727a-9ab2-4df1-b48c-c080c7b7398f"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "130c099b-44ce-4821-b8a3-bd10acdce674"
+				}
+			],
+			"id": "e38fb8d4-0bcb-4594-bc19-5ff3e44418e5"
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "credit",
+					"item": [
+						{
+							"name": "Credit amount",
+							"id": "8524896b-4944-4c38-a7c8-fc780574a278",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "X-API-key",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/admin/credit",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"credit"
+									]
+								},
+								"description": "To be used by the bank tellers to cash checks, receive deposits, savings account transactions among other things."
+							},
+							"response": [
+								{
+									"id": "16925473-a709-4fe2-86aa-1c9780fdb052",
+									"name": "Successful response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "X-API-key",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admin/credit",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"credit"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "9da42cf2-2ea8-4a81-bf90-0a5146105e57"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "d3b823da-9b4b-4f81-8109-80784508c5e4"
+				},
+				{
+					"name": "debit",
+					"item": [
+						{
+							"name": "Debit amount",
+							"id": "81ebeb8f-fa0c-47e6-baef-884072f0c214",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "X-API-key",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{apiKey}}",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/admin/debit",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"debit"
+									]
+								},
+								"description": "To be used by the bank tellers to cash checks, receive deposits, savings account transactions among other things."
+							},
+							"response": [
+								{
+									"id": "8b2aec16-5739-4b02-8959-95baf29e94b1",
+									"name": "Successful response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "X-API-key",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admin/debit",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"debit"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "44999b27-182e-499e-8460-1559c9323c9e"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "3d14bca3-00ce-4505-9042-e7b7e16fc3be"
+				}
+			],
+			"id": "5d652359-badc-45ca-b72a-77cd199359e5"
+		}
+	],
+	"variable": [
+		{
+			"id": "e6d27fe0-4950-47c9-803a-27fb5c42d8b4",
+			"key": "baseUrl",
+			"value": "http://security.postman-breakable.com"
+		}
+	]
+}
